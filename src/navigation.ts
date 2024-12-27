@@ -32,13 +32,13 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'multiservicios@grupoclever.es', href: getPermalink('/privacy') },
-    { text: '601 04 84 59', href: getPermalink('/terms') },
+    { text: 'multiservicios@grupoclever.es', href: 'mailto:multiservicios@grupoclever.es' },
+    { text: '601 04 84 59', href: 'tel:601048459' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
   ],
   footNote: '',
 };

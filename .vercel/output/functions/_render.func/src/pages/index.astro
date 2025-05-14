@@ -1,0 +1,285 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+
+const metadata = {
+  title: 'Grupo Clever',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title">
+      Servicios Profesionales de Limpieza con
+      <span class="text-accent dark:text-white highlight"> Grupo Clever</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Grupo Clever</span> te ofrece soluciones de limpieza personalizadas y de alta calidad para cualquier espacio. Ideal para oficinas, talleres, hogares y negocios. Nuestro equipo profesional garantiza resultados impecables y espacios relucientes, adaptándonos a tus necesidades.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="Ventajas"
+    tagline=""
+    title="Descubre las Ventajas de Elegir Grupo Clever: Servicios y Beneficios Clave"
+    subtitle=""
+    items={[
+      {
+        title: 'Energía y compromiso de una nueva empresa',
+        description:
+          'Como una empresa de reciente formación, en Grupo Clever nos respalda un equipo talentoso y una visión clara: ser un socio confiable para nuestros clientes. Apostamos por la innovación y el trabajo constante para ganarnos tu confianza y superar tus expectativas.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Innovación y tecnología',
+        description:
+          'Utilizamos las últimas herramientas y tecnologías para garantizar resultados efectivos, optimizando tiempos y costos en cada etapa del proceso.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Atención personalizada',
+        description:
+          'Creemos en la importancia de escuchar y entender a nuestros clientes. Por eso, nuestro equipo trabaja contigo para garantizar que cada detalle se ajuste a tus expectativas.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Compromiso con la sostenibilidad',
+        description:
+          'En Grupo Clever entendemos la importancia de cuidar el medio ambiente. Por eso, implementamos prácticas sostenibles en todos nuestros procesos y promovemos soluciones que minimicen el impacto ambiental, contribuyendo al desarrollo de un futuro más responsable y ecológico.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Flexibilidad y adaptabilidad',
+        description:
+          'Nos diferenciamos por nuestra capacidad de adaptarnos rápidamente a las necesidades y requerimientos específicos de cada cliente. Gracias a nuestra estructura dinámica, podemos ofrecer soluciones.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Compromiso con tu bienestar a largo plazo',
+        description:
+          'En Grupo Clever, no solo nos interesa ofrecer un servicio puntual, sino establecer una relación duradera. Queremos ser tu aliado en el mantenimiento y cuidado constante de tus instalaciones, garantizando que siempre estén en las mejores condiciones. Nuestra misión es apoyarte a lo largo del tiempo, asegurando que tu espacio se mantenga limpio, seguro y funcional en todo momento.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    id="Servicios"
+    tagline=""
+    title="Servicios profesionales que puedes encontrar"
+    items={[
+      {
+        title: 'Limpieza diaria y programada',
+        description:
+          'Nos encargamos de mantener tus instalaciones siempre limpias y ordenadas, brindando un ambiente de trabajo saludable y profesional y garantizando que el ambiente de trabajo esté siempre en condiciones óptimas para empezar el día.',
+      },
+      {
+        title: 'Limpieza profunda y mantenimiento especializado',
+        description:
+          'Ofrecemos servicios de limpieza profunda para áreas que requieren atención extra, como alfombras, tapicerías, equipos de oficina, sistemas de climatización y de la eliminación de polvo en lugares difíciles de alcanzar, asegurando la calidad del aire y el confort de tus instalaciones.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/limpieza-oficinas.jpeg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Limpieza de oficinas y locales comerciales</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Limpieza y mantenimiento de escaleras',
+        description:
+          'Nos encargamos de mantener impecables las escaleras y rellanos de los edificios, eliminando el polvo, las manchas y la suciedad acumulada en barandillas, peldaños y pasamanos. Además, utilizamos productos antideslizantes para garantizar la seguridad de los usuarios.',
+      },
+      {
+        title: 'Limpieza de zonas comunes y exteriores',
+        description:
+          'Además de las escaleras, realizamos la limpieza de otras zonas comunes como vestíbulos, ascensores, patios y accesos al edificio. También nos encargamos del mantenimiento de áreas exteriores, como entradas, aceras, cristales y jardines, para asegurar una buena impresión a visitantes y residentes.',
+      },
+      {
+        title: 'Gestión de pequeñas reparaciones',
+        description:
+          'Nos ocupamos de pequeñas reparaciones en el edificio, como cambios de bombillas, ajustes de cerraduras o reparación de desperfectos menores en elementos estructurales, asegurando que las instalaciones siempre estén en perfecto estado.',
+      },
+      {
+        title: 'Abrillantados y acristalados profesionales',
+        description:
+          'Usamos máquinas rotativas y productos específicos para devolver el brillo original a suelos de mármol, terrazo y piedra natural. Este proceso no solo mejora la estética y elimina manchas y rayajos del suelo sino que también prolonga la vida útil de las superficies.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/limpieza-comunidades.jpeg',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mantenimiento de Edificios y Limpieza de Escaleras</h3>
+      En Grupo Clever, entendemos que el mantenimiento de edificios y la limpieza de áreas comunes, como las escaleras, son esenciales para garantizar la seguridad, el confort y una buena impresión de cualquier propiedad.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Limpieza de maquinaria y equipos industriales',
+        description: 'Ofrecemos servicios de limpieza específicos para maquinaria pesada y equipos industriales. Usamos métodos adecuados para eliminar grasa, polvo y residuos acumulados, prolongando la vida útil de los equipos y asegurando su óptimo rendimiento.',
+      },
+      {
+        title: 'Limpieza de zonas de producción y almacenamiento',
+        description:
+          'Nos encargamos de la limpieza de áreas clave como líneas de producción, almacenes y zonas de carga y descarga. Garantizamos un entorno libre de residuos, contaminantes y polvo, cumpliendo con los estándares de seguridad e higiene industrial.',
+      },
+      {
+        title: 'Control y eliminación de residuos industriales',
+        description:
+          'Realizamos la gestión y eliminación adecuada de los residuos generados durante los procesos industriales, cumpliendo con todas las normativas medioambientales y de seguridad. Nuestro objetivo es minimizar el impacto ambiental mientras mantenemos tus instalaciones limpias y en pleno funcionamiento.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/limpieza-naves.jpeg',
+      alt: 'Blueprint Image',
+    }}
+  >
+
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Limpieza industrial de naves y fábricas</h3>
+      Limpiezas a fondo en instalaciones industriales, garantizando un entorno seguro, higiénico y libre de contaminantes.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    id="Testimonials"
+    title="¿Que dicen nuestros clientes?"
+    testimonials={[
+      {
+        testimonial: 'El servicio de limpieza de mi comunidad fue impecable. Los espacios comunes quedaron relucientes, y se nota la atención al detalle en cada rincón. Ahora da gusto ver el edificio. ¡Altamente recomendado!',
+        name: 'Aitana De Andres',
+        job: '',
+        image: {
+          src: '~/assets/images/Aitana De Andres Image.png',
+          alt: 'Aitana De Andres Image',
+        },
+      },
+      {
+        testimonial: 'Contratamos el servicio de limpieza para nuestra oficina y fue una experiencia increíble. Todo quedó reluciente, desde los escritorios hasta las áreas comunes. Además, el equipo fue puntual y muy profesional. Sin duda, seguiremos contando con sus servicios.',
+        name: 'Diego Olivas',
+        job: '',
+        image: {
+          src: '~/assets/images/Diego Olivas Image.png',
+          alt: 'Diego Olivas Image',
+        },
+      },
+      {
+        testimonial:
+          'La limpieza de mi taller superó mis expectativas. Lograron eliminar incluso las manchas más difíciles y dejaron el espacio como nuevo. El proceso fue rápido y eficiente, y el resultado habla por sí solo. Recomiendo esta empresa sin ninguna duda.',
+        name: 'Guillermo Candeias',
+        job: '',
+        image: {
+          src: '~/assets/images/Guillermo Candeias Image.png',
+          alt: 'Guillermo Candeias Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- HeroText Widget ******************* -->
+
+  <!--<ContactUs
+    id="Contacto"
+    title="¡Déjanos un mensaje!"
+    subtitle=""
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nombre',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Mensaje',
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal.',
+    }}
+    description=""
+  />-->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="Contacto"
+    title="Contacto"
+    columns={2}
+    items={[
+      {
+        title: 'Déjanos un mensaje',
+        description:
+          'multiservicios@grupoclever.es',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Llámanos',
+        description:
+          '601 04 84 59',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+</Layout>
